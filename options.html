@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Kinopoisk Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; border-radius: 0 !important; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: #e8e8e8;
+      font: 10px/1.6 "Press Start 2P", "Courier New", monospace;
+      background: #1b1b1b;
+      image-rendering: pixelated;
+    }
+    .panel {
+      padding: 14px;
+      background: #1b1b1b;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 0 #000;
+    }
+    input {
+      width: 100%;
+      padding: 10px 8px;
+      color: #fff;
+      font: inherit;
+      background: #000;
+      border: 2px solid #5a5a5a;
+      box-shadow: inset 3px 3px 0 #0a0a0a, inset -2px -2px 0 #2a2a2a;
+      outline: none;
+    }
+    input:focus { border-color: #ff7a1a; }
+    .buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    button {
+      flex: 1;
+      padding: 10px 6px;
+      color: #fff;
+      font: inherit;
+      text-shadow: 2px 2px 0 #000;
+      background: #3c3c3c;
+      border: 3px solid #000;
+      box-shadow: inset 3px 3px 0 #6b6b6b, inset -3px -3px 0 #222;
+      cursor: pointer;
+    }
+    button:hover { background: #4a4a4a; color: #ffe08a; }
+    button:active {
+      box-shadow: inset 3px 3px 0 #222, inset -3px -3px 0 #6b6b6b;
+      padding: 11px 5px 9px 7px;
+    }
+    button.primary { background: #b84800; box-shadow: inset 3px 3px 0 #ff8a3a, inset -3px -3px 0 #6e2a00; }
+    button.primary:hover { background: #d05300; }
+    button.primary:active { box-shadow: inset 3px 3px 0 #6e2a00, inset -3px -3px 0 #ff8a3a; }
+    #status {
+      margin-top: 12px;
+      min-height: 1.6em;
+      text-shadow: 2px 2px 0 #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <label for="target">Сайт для просмотра</label>
+    <input id="target" placeholder="kinokino.win" spellcheck="false">
+    <div class="buttons">
+      <button id="save" class="primary">Сохранить</button>
+      <button id="reset">Сброс</button>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
