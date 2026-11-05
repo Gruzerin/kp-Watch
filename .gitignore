@@ -1,0 +1,5 @@
+*.zip
+Thumbs.db
+desktop.ini
+.vscode/
+.claude/
